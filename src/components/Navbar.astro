@@ -1,0 +1,47 @@
+---
+type Link = { label: string; href: string };
+type Props = { name: string; links: Link[] };
+const { name, links } = Astro.props as Props;
+---
+<header class="sticky top-0 z-40 border-b border-border/60 bg-bg/65 backdrop-blur-md">
+  <div class="container-pad flex h-14 items-center justify-between gap-3">
+    <a href="#top" class="font-semibold tracking-tight hover:opacity-90">{name}</a>
+
+    <nav class="hidden md:flex items-center gap-6 text-sm">
+      {links.map((l) => (
+        <a class="text-muted-fg hover:text-fg transition" href={l.href}>{l.label}</a>
+      ))}
+      <button id="themeToggle" class="btn px-3 py-1.5" type="button" aria-label="Toggle theme">🌓</button>
+    </nav>
+
+    <div class="md:hidden flex items-center gap-2">
+      <button id="themeToggleMobile" class="btn px-3 py-1.5" type="button" aria-label="Toggle theme">🌓</button>
+      <details class="relative">
+        <summary class="btn px-3 py-1.5 list-none cursor-pointer select-none">☰</summary>
+        <div class="absolute right-0 mt-2 w-56 glass p-2">
+          <div class="flex flex-col gap-1">
+            {links.map((l) => (
+              <a class="rounded-xl2 px-3 py-2 text-sm text-muted-fg hover:bg-muted/60 hover:text-fg" href={l.href}>{l.label}</a>
+            ))}
+          </div>
+        </div>
+      </details>
+    </div>
+  </div>
+
+  <script is:inline>
+    const applyTheme = (next) => {
+      if (next === "dark") document.documentElement.classList.add("dark");
+      else document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", next);
+    };
+
+    const toggle = () => {
+      const isDark = document.documentElement.classList.contains("dark");
+      applyTheme(isDark ? "light" : "dark");
+    };
+
+    document.getElementById("themeToggle")?.addEventListener("click", toggle);
+    document.getElementById("themeToggleMobile")?.addEventListener("click", toggle);
+  </script>
+</header>

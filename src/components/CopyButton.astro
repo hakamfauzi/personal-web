@@ -1,0 +1,31 @@
+---
+type Props = {
+  value: string;
+  label?: string;
+};
+const { value, label = "Copy" } = Astro.props as Props;
+---
+<button
+  class="btn"
+  type="button"
+  data-copy={value}
+  aria-label={`Copy ${value}`}
+>
+  {label}
+</button>
+
+<script is:inline>
+  document.addEventListener("click", async (e) => {
+    const btn = e.target.closest("[data-copy]");
+    if (!btn) return;
+    try {
+      const val = btn.getAttribute("data-copy");
+      await navigator.clipboard.writeText(val);
+      const prev = btn.textContent;
+      btn.textContent = "Copied!";
+      setTimeout(() => (btn.textContent = prev), 900);
+    } catch {
+      // ignore
+    }
+  });
+</script>

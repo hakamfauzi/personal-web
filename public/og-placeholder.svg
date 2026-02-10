@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#7C5CFF"/>
+      <stop offset="1" stop-color="#2DD4BF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0B1020"/>
+  <circle cx="320" cy="220" r="240" fill="url(#g)" opacity="0.35"/>
+  <circle cx="980" cy="520" r="320" fill="url(#g)" opacity="0.18"/>
+  <text x="80" y="280" font-family="ui-sans-serif, system-ui" font-size="64" font-weight="800" fill="white">Labib Hakam Fauzi</text>
+  <text x="80" y="350" font-family="ui-sans-serif, system-ui" font-size="32" fill="rgba(255,255,255,0.85)">AI/ML • Data Analytics • Automation</text>
+</svg>

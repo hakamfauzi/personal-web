@@ -1,0 +1,87 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import HeroBento from "../components/HeroBento.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import Timeline from "../components/Timeline.astro";
+import SkillsBento from "../components/SkillsBento.astro";
+import ProjectGrid from "../components/ProjectGrid.astro";
+import Achievements from "../components/Achievements.astro";
+import Footer from "../components/Footer.astro";
+
+import { portfolio } from "../data/portfolio";
+---
+<BaseLayout title={portfolio.meta.title} description={portfolio.meta.description}>
+  <Navbar
+    name={portfolio.profile.name}
+    links={[
+      { label: "Work", href: "#work" },
+      { label: "Org & Campus", href: "#org" },
+      { label: "Skills", href: "#skills" },
+      { label: "Projects", href: "#projects" },
+      { label: "Achievements", href: "#achievements" }
+    ]}
+  />
+
+  <main>
+    <HeroBento profile={portfolio.profile} />
+
+    <!-- Education (bonus section; lightweight) -->
+    <section class="container-pad mt-8">
+      <div class="reveal glass p-6 sm:p-8">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div class="flex items-center gap-4">
+            {portfolio.education[0].logo && (
+              <div class="shrink-0 rounded-xl2 border border-border/70 bg-muted/40 p-2">
+                <img
+                  src={portfolio.education[0].logo}
+                  alt={`${portfolio.education[0].school} logo`}
+                  class="h-12 w-12 rounded-lg object-cover"
+                  loading="lazy"
+                />
+              </div>
+            )}
+
+            <div>
+            <p class="text-xs uppercase tracking-wide text-muted-fg">Education</p>
+            <h2 class="mt-2 text-xl font-semibold tracking-tight">{portfolio.education[0].school}</h2>
+            <p class="mt-1 text-sm text-muted-fg">{portfolio.education[0].degree} • {portfolio.education[0].period}</p>
+            </div>
+          </div>
+          <div class="rounded-xl2 border border-border/70 bg-muted/40 px-4 py-3">
+            <p class="text-xs text-muted-fg">GPA</p>
+            <p class="mt-1 text-sm font-semibold">{portfolio.education[0].detail}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-pad mt-14" id="work">
+      <SectionHeader title="Work Experience" subtitle="" />
+      <Timeline items={portfolio.workExperience} />
+    </section>
+
+    <section class="container-pad mt-14" id="org">
+      <SectionHeader title="Organizational & Campus Experience" subtitle="Roles, contributions, and outputs during time at university/organization." />
+      <Timeline items={portfolio.orgAndCampusExperience} />
+    </section>
+
+    <section class="container-pad mt-14" id="skills">
+      <SectionHeader title="Expertise" subtitle="The tools and skills I use to turn problems into solutions." />
+      <SkillsBento groups={portfolio.skills} />
+    </section>
+
+    <section class="container-pad mt-14" id="projects">
+      <SectionHeader title="Projects" subtitle="Click the card to directly open the project link ." />
+      <ProjectGrid projects={portfolio.projects} />
+      
+    </section>
+
+    <section class="container-pad mt-14" id="achievements">
+      <SectionHeader title="Achievements" />
+      <Achievements items={portfolio.achievements} />
+    </section>
+
+    <Footer name={portfolio.profile.name} email={portfolio.profile.email} linkedin={portfolio.profile.linkedin} />
+  </main>
+</BaseLayout>

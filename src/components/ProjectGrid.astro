@@ -1,0 +1,80 @@
+---
+import Tag from "./Tag.astro";
+
+type Project = {
+  title: string;
+  desc: string;
+  link: string;
+  year?: string;
+  stack?: string[];
+  tags?: string[];
+  extraLinks?: { label: string; href: string }[];
+  note?: string;
+  thumbnail?: string;
+};
+
+type Props = { projects: Project[] };
+const { projects } = Astro.props as Props;
+
+const isPublic = (href: string) => href && href !== "#" && !href.startsWith("#");
+---
+<div class="reveal grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  {projects.map((p) => (
+    <article class={`group relative glass p-5 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-glow`}>
+      {isPublic(p.link) ? (
+        <a
+          class="absolute inset-0 z-0 rounded-xl2 focus:outline-none focus:ring-2 focus:ring-accent/40"
+          href={p.link}
+          target="_blank"
+          rel="noreferrer"
+          aria-label={`Open project ${p.title}`}
+        />
+      ) : null}
+
+      <div class="relative z-10 flex items-start justify-between gap-3">
+        <div class="min-w-0">
+          <h3 class="text-base font-semibold leading-snug">
+            {p.title}
+            {isPublic(p.link) ? <span class="ml-2 text-xs text-muted-fg">↗</span> : <span class="ml-2 text-xs text-muted-fg">(Private)</span>}
+          </h3>
+          {p.year ? <p class="mt-1 text-xs text-muted-fg">{p.year}</p> : null}
+        </div>
+
+        {p.thumbnail ? (
+          <img
+            src={p.thumbnail}
+            alt=""
+            class="h-10 w-10 rounded-xl2 border border-border/70 bg-muted/30 object-cover"
+            loading="lazy"
+          />
+        ) : null}
+      </div>
+
+      <p class="relative z-10 mt-3 text-sm text-fg/90">{p.desc}</p>
+      {p.note ? <p class="relative z-10 mt-2 text-xs text-muted-fg">{p.note}</p> : null}
+
+      {(p.stack?.length || p.tags?.length) ? (
+        <div class="relative z-10 mt-4 flex flex-wrap gap-2">
+          {p.stack?.slice(0, 3).map((t) => <Tag text={t} />)}
+          {p.tags?.slice(0, 2).map((t) => <Tag text={t} />)}
+        </div>
+      ) : null}
+
+      {p.extraLinks?.length ? (
+        <div class="relative z-10 mt-4 flex flex-wrap gap-2">
+          {p.extraLinks.map((l) => (
+            <a class="btn px-3 py-1.5 text-xs" href={l.href} target="_blank" rel="noreferrer">
+              {l.label} ↗
+            </a>
+          ))}
+        </div>
+      ) : null}
+
+      {!isPublic(p.link) ? (
+        <div class="relative z-10 mt-5 rounded-xl2 border border-border/70 bg-muted/40 p-3 text-xs text-muted-fg">
+          <p>Internal case study.</p>
+        </div>
+      ) : null}
+    </article>
+  ))}
+</div>

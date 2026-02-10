@@ -1,0 +1,46 @@
+---
+import Tag from "./Tag.astro";
+
+type Item = {
+  title: string;
+  org: string;
+  period: string;
+  bullets: string[];
+  tags?: string[];
+};
+
+type Props = { items: Item[] };
+
+const { items } = Astro.props as Props;
+---
+<div class="reveal">
+  <div class="relative">
+    <div class="absolute left-4 top-0 h-full w-px bg-border/70"></div>
+
+    <div class="space-y-4">
+      {items.map((it) => (
+        <div class="glass p-5 sm:p-6 pl-10 relative">
+          <div class="absolute left-[10px] top-7 h-3 w-3 rounded-full bg-accent shadow-glow"></div>
+
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+            <div class="min-w-0">
+              <h3 class="text-base font-semibold leading-snug">{it.title}</h3>
+              <p class="text-sm text-muted-fg">{it.org}</p>
+            </div>
+            <p class="text-xs text-muted-fg sm:text-right">{it.period}</p>
+          </div>
+
+          <ul class="mt-4 list-disc space-y-2 pl-4 text-sm text-fg/90">
+            {it.bullets.map((b) => <li>{b}</li>)}
+          </ul>
+
+          {it.tags?.length ? (
+            <div class="mt-4 flex flex-wrap gap-2">
+              {it.tags.map((t) => <Tag text={t} />)}
+            </div>
+          ) : null}
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

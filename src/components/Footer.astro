@@ -1,0 +1,32 @@
+---
+type Props = {
+  name: string;
+  email: string;
+  linkedin: string;
+};
+const { name, email, linkedin } = Astro.props as Props;
+const year = new Date().getFullYear();
+---
+<footer class="mt-16 border-t border-border/60">
+  <div class="container-pad py-10">
+    <div class="glass p-6 sm:p-8">
+      <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p class="text-xs uppercase tracking-wide text-muted-fg">Let’s work together</p>
+          <h3 class="mt-2 text-xl font-semibold tracking-tight">Have a project or role in mind?</h3>
+          <p class="mt-2 text-sm text-muted-fg">Reach out and let’s build something impactful.</p>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <a class="btn btn-primary" href={`mailto:${email}`}>Email me →</a>
+          <a class="btn" href={linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between text-xs text-muted-fg">
+      <p>© {year} {name}. Built with Astro.</p>
+      <a class="link" href="#top">Back to top</a>
+    </div>
+  </div>
+</footer>
