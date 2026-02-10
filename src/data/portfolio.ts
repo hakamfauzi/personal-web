@@ -57,7 +57,7 @@ export const portfolio = {
     },
     stack: ["Python", "TensorFlow", "Git", "Data pipeline", "Machine learning", "NLP", "Computer Vision"],
     highlights: [
-      { label: "Focus", value: "AI/ML + Analytics, Business Analysis" },
+      { label: "Focus", value: "AI/ML + Analytics, Business Analysis, and Information System Audit (ISO 27001)" },
       { label: "Tools", value: "Python • TensorFlow • Git " },
       { label: "Based in", value: "Depok, ID" }
     ],
@@ -183,7 +183,7 @@ export const portfolio = {
   skills: [
     {
       group: "Core",
-      items: ["Problem solving", "Analytical skills", "Business & use case analysis", "Research & solution development"]
+      items: ["Problem solving", "Analytical skills", "Business & use case analysis", "Research & solution development", "Information system audit"]
     },
     {
       group: "Data & ML",
@@ -191,7 +191,7 @@ export const portfolio = {
     },
     {
       group: "Tools",
-      items: ["Python", "Git", "TensorFlow", "Jupyter Notebook", "Google Colab", "Streamlit"]
+      items: ["Python", "Git", "TensorFlow", "Jupyter Notebook", "Google Colab", "Streamlit", "ISO 27001"]
     }
   ],
 
