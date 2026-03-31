@@ -43,8 +43,8 @@ export const portfolio = {
     linkedin: "https://www.linkedin.com/in/labib-hakam-fauzi/",
     headline: "Informatics Fresh Graduate — AI/ML • Data Analytics • Business Analysist",
     summary:
-      "Informatics fresh graduate from Telkom University with experience in AI/ML, data analytics, and automation, bridging business use case analysis with structured solution design. Completed ISO 27001-based Information System Audit bootcamp (Cisometric) and delivered hands-on ML projects (NLP, CV, clustering, data pipelines) using Python, TensorFlow, and Git, with internship exposure at PT Infomedia Nusantara producing stakeholder-ready AI use case recommendations.",
-    photo: "/images/profile-placeholder.svg",
+      "Informatics fresh graduate from Telkom University with a focus on IT Business Analysis, experienced in bridging business needs with technology solutions through requirement analysis and data-driven insights. Skilled in translating business use cases into structured system designs, supported by hands-on experience in data analytics, automation, and AI/ML projects. Completed ISO 27001-based Information System Audit bootcamp and gained internship experience delivering stakeholder-ready recommendations, demonstrating strong analytical thinking, communication, and alignment between business objectives and technical solutions.",
+    photo: "/images/profile-placeholder.jpg",
     socials: [
       { label: "Email", href: "mailto:labibhakam.fauzi@gmail.com" },
       { label: "WhatsApp", href: "https://wa.me/6287831548658" },
@@ -57,8 +57,8 @@ export const portfolio = {
     },
     stack: ["Python", "TensorFlow", "Git", "Data pipeline", "Machine learning", "NLP", "Computer Vision"],
     highlights: [
-      { label: "Focus", value: "AI/ML + Analytics, Business Analysis, and Information System Audit (ISO 27001)" },
-      { label: "Tools", value: "Python • TensorFlow • Git " },
+      { label: "Focus", value: "Business Analysis, Business Solution, AI/ML + Analytics, and Information System Audit (ISO 27001)" },
+      { label: "Tools", value: "Notion • Jira • Python • TensorFlow • Git" },
       { label: "Based in", value: "Depok, ID" }
     ],
   },
@@ -74,16 +74,6 @@ export const portfolio = {
   ],
 
   workExperience: [
-    // {
-    //   title: "Awardee",
-    //   org: "BSI Scholarship Talenta 2025",
-    //   period: "Nov 2025 – Present",
-    //   bullets: [
-    //     "Selected as a scholarship awardee and completed structured career preparation training for the BSI ODP program selection.",
-    //     "Completed soft-skill modules and final scholarship assignments, demonstrating discipline and professional readiness through consistent deliverable completion."
-    //   ],
-    //   tags: ["Scholarship", "Career Prep", "Soft Skills"]
-    // },
     {
       title: "Intern — CoE (Business), Div3A (AI, Automation, and Analytics)",
       org: "PT Infomedia Nusantara",
@@ -97,6 +87,16 @@ export const portfolio = {
   ] as ExperienceItem[],
 
   orgAndCampusExperience: [
+    {
+      title: "BSI Scholarship Talenta 2025",
+      org: "BSI Maslahat",
+      period: "Nov 2025 – Present",
+      bullets: [
+        "Selected as a scholarship awardee and completed structured career preparation training for the BSI ODP program selection.",
+        "Completed soft-skill modules and final scholarship assignments, demonstrating discipline and professional readiness through consistent deliverable completion."
+      ],
+      tags: ["Scholarship", "Career Prep", "Soft Skills"]
+    },
     {
       title: "Coding Camp 2025 Participant (Machine Learning Engineer Path)",
       org: "Cohort Coding Camp by DBS Foundation 2025",
@@ -191,11 +191,29 @@ export const portfolio = {
     },
     {
       group: "Tools",
-      items: ["Python", "Git", "TensorFlow", "Jupyter Notebook", "Google Colab", "Streamlit", "ISO 27001"]
+      items: ["Python", "Notion", "Jira", "Git", "TensorFlow", "Jupyter Notebook", "Google Colab", "Streamlit", "ISO 27001"]
     }
   ],
 
   projects: [
+    {
+      title: "Business Analyst Portofolio",
+      desc: "In this project, I acted as an IT Business Analyst responsible for bridging business needs and technical implementation",
+      link: "https://windy-throne-e80.notion.site/IT-Business-Analyst-Portofolio-Labib-Hakam-Fauzi-33437cca6af080c19c6ee0c61faf4972?source=copy_link",
+      year: "2026",
+      stack: ["Notion", "Jira", "Canva", "Figma"],
+      tags: ["IT Business Analyst", "BA", "Business Solution"],
+      thumbnail: "/images/telkom-university-logo.svg"
+    },
+    {
+      title: "Infomedia Nusantara — AI Use Case Work (Private)",
+      desc: "AI maturity assessment, AI innovation (Agentic QC AI), and end-to-end framework for AI use case solutioning. Includes involvement in use cases: SSI, Telkom Metra, GCT Telkom, etc.",
+      link: "#",
+      year: "2025",
+      stack: ["AI", "Automation", "Analytics"],
+      tags: ["Enterprise", "Private"],
+      thumbnail: "/images/infomedia.svg"
+    },
     {
       title: "Final Project — IS Audit Class Batch 2",
       desc: "Cisometric (Information System Audit) final project based on ISO 27001.",
@@ -251,16 +269,6 @@ export const portfolio = {
       tags: ["Automation"],
       thumbnail: "/images/dbs.svg"
     },
-    {
-      title: "Infomedia Nusantara — AI Use Case Work (Private)",
-      desc: "AI maturity assessment, AI innovation (Agentic QC AI), and end-to-end framework for AI use case solutioning. Includes involvement in use cases: SSI, Telkom Metra, GCT Telkom, etc.",
-      link: "#",
-      year: "2025",
-      stack: ["AI", "Automation", "Analytics"],
-      tags: ["Enterprise", "Private"],
-      note: "No public link available",
-      thumbnail: "/images/infomedia.svg"
-    }
   ] as ProjectItem[],
 
   achievements: [
