@@ -75,12 +75,14 @@ export const portfolio = {
 
   workExperience: [
     {
-      title: "Intern — CoE (Business), Div3A (AI, Automation, and Analytics)",
+      title: "Intern — CoE (IT Business Analyst), Div3A (AI, Automation, and Analytics)",
       org: "PT Infomedia Nusantara",
       period: "Jul 2025 – Dec 2025",
       bullets: [
         "Analyzed end-to-end AI use cases to support internal solution planning within the CoE Business team.",
-        "Designed structured solution concepts for AI, automation, and analytics use cases, contributing to stakeholder-ready recommendations for 3–5 initiatives."
+        "Designed structured solution concepts for AI, automation, and analytics use cases, contributing to stakeholder-ready recommendations for 3–5 initiatives.",
+        "Collaborated with cross-functional teams to align solution designs with business objectives and technical feasibility, ensuring practical implementation pathways.",
+        "Creating a BRD (Business Requirements Document) and PDD (Process Design Document) based on the results of the use case analysis"
       ],
       tags: ["AI Use Case", "Automation", "Analytics", "Solution Design"]
     }
