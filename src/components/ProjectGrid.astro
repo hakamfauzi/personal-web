@@ -23,7 +23,7 @@ const isPublic = (href: string) => href && href !== "#" && !href.startsWith("#")
     <article class={`group relative glass p-5 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-glow`}>
       {isPublic(p.link) ? (
         <a
-          class="absolute inset-0 z-0 rounded-xl2 focus:outline-none focus:ring-2 focus:ring-accent/40"
+          class="absolute inset-0 z-20 rounded-xl2 focus:outline-none focus:ring-2 focus:ring-accent/40"
           href={p.link}
           target="_blank"
           rel="noreferrer"

@@ -226,11 +226,10 @@ export const portfolio = {
     {
       title: "Data Analyst Project — Coding Camp 2025",
       desc: "Coding Camp project with Streamlit deployment.",
-      link: "https://tinyurl.com/5n95kskk",
+      link: "https://dataanalyst-coding-camp.streamlit.app/",
       year: "2025",
       stack: ["Python", "Data Analysis"],
       tags: ["Dashboard"],
-      extraLinks: [{ label: "Streamlit", href: "https://dataanalyst-coding-camp.streamlit.app/" }],
       thumbnail: "/images/dbs.svg"
     },
     {
