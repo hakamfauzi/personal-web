@@ -55,7 +55,7 @@ export const portfolio = {
       primary: { label: "View Project", href: "#projects" } as CTA,
       secondary: { label: "Download Resume", href: "/CV_Labib-Hakam-Fauzi.pdf", note: "Replace with your CV file in /public" } as CTA,
     },
-    stack: ["Python", "TensorFlow", "Git", "Data pipeline", "Machine learning", "NLP", "Computer Vision"],
+    stack: ["Notion","Jira","Python", "TensorFlow", "Git", "Data pipeline", "Machine learning"],
     highlights: [
       { label: "Focus", value: "Business Analysis, Business Solution, AI/ML + Analytics, and Information System Audit (ISO 27001)" },
       { label: "Tools", value: "Notion • Jira • Python • TensorFlow • Git" },
