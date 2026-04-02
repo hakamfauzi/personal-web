@@ -32,7 +32,7 @@ export const portfolio = {
   meta: {
     title: "Labib Hakam Fauzi — Portfolio",
     description:
-      "Creative-professional portfolio of Labib Hakam Fauzi: AI/ML, data analytics, automation, projects, and achievements.",
+      "Creative-professional portfolio of Labib Hakam Fauzi: IT Business Analyis, data analytics,AI/ML, projects, and achievements.",
   },
 
   profile: {
@@ -41,7 +41,7 @@ export const portfolio = {
     phone: "+62 878-3154-8658",
     email: "labibhakam.fauzi@gmail.com",
     linkedin: "https://www.linkedin.com/in/labib-hakam-fauzi/",
-    headline: "Informatics Fresh Graduate — AI/ML • Data Analytics • Business Analysist",
+    headline: "Informatics Fresh Graduate — IT Business Analysist • Data Analytics • AI/ML ",
     summary:
       "Informatics fresh graduate from Telkom University with a focus on IT Business Analysis, experienced in bridging business needs with technology solutions through requirement analysis and data-driven insights. Skilled in translating business use cases into structured system designs, supported by hands-on experience in data analytics, automation, and AI/ML projects. Completed ISO 27001-based Information System Audit bootcamp and gained internship experience delivering stakeholder-ready recommendations, demonstrating strong analytical thinking, communication, and alignment between business objectives and technical solutions.",
     photo: "/images/profile-placeholder.jpg",
@@ -52,8 +52,8 @@ export const portfolio = {
       { label: "Certificates", href: "https://tinyurl.com/ykmfxdkm" }
     ] as Social[],
     ctas: {
-      primary: { label: "Lihat Project", href: "#projects" } as CTA,
-      secondary: { label: "Download CV", href: "/CV_Labib-Hakam-Fauzi.pdf", note: "Replace with your CV file in /public" } as CTA,
+      primary: { label: "View Project", href: "#projects" } as CTA,
+      secondary: { label: "Download Resume", href: "/CV_Labib-Hakam-Fauzi.pdf", note: "Replace with your CV file in /public" } as CTA,
     },
     stack: ["Python", "TensorFlow", "Git", "Data pipeline", "Machine learning", "NLP", "Computer Vision"],
     highlights: [
